@@ -6,18 +6,25 @@ import IncomeTransaction from './IncomeTransaction'
 
 const Incomelist = () => {
 
-    const { incometransaction } = useContext(GlobalContext);
+    const { incometransactions } = useContext(GlobalContext)
+
+
 
     return (
-       
+
         <div className='transactions transactions-income'>
-          
-            <h2>Transaction History</h2>
-          
+
+            <h2>Income History</h2>
+
+
             <ul className='transaction-list'>
-           
-                {incometransaction.map(incometransaction => (
-                    <IncomeTransaction key={incometransaction.id} incometransaction={incometransaction} />))}
+                {incometransactions.map
+                    (incometransaction => (
+                        <IncomeTransaction
+                            key={incometransaction.id}
+                            incometransaction={incometransaction}
+                        />
+                    ))}
 
             </ul>
 

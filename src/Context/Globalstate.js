@@ -2,15 +2,11 @@ import React, { createContext, useReducer } from 'react';
 import AppReducer from './AppReducer';
 
 const initialstate = {
-    incometransaction: [
-        { id: 1, incometext: 'Salary', incomeamount: 60000 },
-        { id: 2, incometext: 'Bike Sold', incomeamount: 40000 },
-        { id: 3, incometext: 'Online', incomeamount: 20000 },
+    incometransactions: [
+   
     ],
-    expensetransaction: [
-        { id: 4, expensetext: 'Mobile purchase', expenseamount: 12000 },
-        { id: 5, expensetext: 'Room Rent', expenseamount: 10000 },
-        { id: 6, expensetext: 'Netflix Membership', expenseamount: 5000 },
+    expensetransactions: [
+  
     ],
 
 };
@@ -19,18 +15,43 @@ export const GlobalContext = createContext(initialstate);
 
 export const GlobalContextProvider = ({ children }) => {
 
-    const [state, dispatch] = useReducer (AppReducer, initialstate)
+    const [state, dispatch] = useReducer(AppReducer, initialstate)
+
+    const addincome = incometransaction => {
+        dispatch({
+            type: "ADD_INCOME",
+            payload: incometransaction
+        });
+    }
+
+
+    const addexpense = expensetransaction => {
+        dispatch({
+            type: "ADD_EXPENSE",
+            payload: expensetransaction
+        });
+    }
+
+    const deletetransaction = id => {
+        dispatch({
+            type: "DELETE_TRANSACTION",
+            payload: id
+        });
+    };
+
+
 
     return (
 
         <GlobalContext.Provider value={{
-            incometransaction: state.incometransaction,
-            expensetransaction: state.expensetransaction,
+            incometransactions: state.incometransactions,
+            expensetransactions: state.expensetransactions,
+            addincome,
+            addexpense,
+            deletetransaction,
         }}>
             {children}
         </GlobalContext.Provider>
-
-
     )
 
 }
