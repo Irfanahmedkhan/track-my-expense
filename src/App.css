@@ -1,32 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Muli:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap");
-
 .container {
   width: 60%;
   margin: 30px auto;
-  height: 550px;
+  height: 750px;
   align-items: center;
-  -webkit-box-shadow: 20px 10px 10px 0 rgba(0,0,0,.4);
-    box-shadow: 0 5px 10px 0 rgba(0,0,0,.4);
-
+  -webkit-box-shadow: 20px 10px 10px 0 rgba(0, 0, 0, .4);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .4);
+  border-left: 5px solid #93a7e7;
+  border-right: 5px solid #93a7e7;
+  border-bottom: 5px solid #93a7e7;
 }
 
-.header{
-        height: 10%;
-      background-color:#93a7e7;
+.header {
+  height: 10%;
+  background-color: #93a7e7;
 }
 
-.center{
+.center {
   height: 90%;
   display: flex;
   justify-content: center;
 }
 
-.sidebar{
+.sidebar {
   width: 35%;
 }
 
-.main{
-  width: 100%;
+.main {
+  width: 90%;
+  height: 95%;
   border-left: 5px solid #93a7e7;
 }
 
@@ -40,39 +42,34 @@
   line-height: 10px;
   text-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.4);
   font-weight: 800;
-flex-direction: column;
+  flex-direction: column;
   width: 100%;
-  
-
-
 }
-.main-balance{
-  
+
+.main-balance {
   font-size: 1.3vw;
-  
-
 }
-.income-expense{
+
+.income-expense {
   font-size: 1.5vw;
   display: flex;
   flex-direction: column;
-  
-
 }
 
 .plus, .minus {
-    line-height: 5px;
-
+  line-height: 5px;
 }
+
 .plus {
   color: #117926;
 }
+
 .minus {
   color: #f35829;
 }
 
-
 .transaction-list {
+  margin-left: 25px;
   padding: 0px;
   width: 90%;
   max-height: 15rem;
@@ -81,7 +78,6 @@ flex-direction: column;
 }
 
 .transactions h2 {
-  
   color: brown;
   font-size: 1.8vw;
   text-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.4);
@@ -102,7 +98,7 @@ flex-direction: column;
 
 .transaction-text {
   width: 15vw;
- text-align: left;
+  text-align: left;
 }
 
 .transaction-amount {
@@ -119,10 +115,8 @@ flex-direction: column;
   cursor: pointer;
   outline: none;
   border-radius: 5px;
-    box-shadow: 5 0.8rem 5rem rgba(247, 243, 243, 0.2);
-
+  box-shadow: 5 0.8rem 5rem rgba(247, 243, 243, 0.2);
 }
-
 
 .transactions-income .transaction {
   margin-left: 25px;
@@ -131,41 +125,26 @@ flex-direction: column;
 
 .transactions-expense .transaction {
   background-color: #cf5856;
-    margin-left: 20px;
-
+  margin-left: 20px;
 }
 
-
-.history{
-  height: 50%;
+.history {
+  height: 70%;
 }
-
 
 .mainbalance, .trbalance, .income-input, .expense-input, .income-history, .expense-history {
   width: 50%;
 }
 
-
-
-@media screen and (min-width: 2in) and (max-width: 4in){
-
-
-
-} 
-
-
-
 .input-group input:not([type="submit"]) {
   display: flex;
   flex-direction: row;
   width: 15;
-  height: 25px;
-  
+  height: 45px;
   border: none;
   background: transparent;
   border-bottom: 0.2vw solid rgb(151, 151, 151);
-  margin:10px;
-
+  margin: 10px;
   font-size: 1.3vw;
   color: rgb(71, 70, 70);
   outline: none;
@@ -174,16 +153,13 @@ flex-direction: column;
 
 .income input:not([type="submit"]):focus {
   border-bottom: 0.2rem solid #77c987;
-
 }
 
 .expense input:not([type="submit"]):focus {
   border-bottom: 0.2rem solid #ff716e;
-
 }
 
 .input-group input[type="submit"] {
-
   width: 6vw;
   padding: 0.2vw;
   height: 2.5vw;
@@ -222,16 +198,135 @@ input[type="number"]::-webkit-inner-spin-button {
   line-height: 0px;
 }
 
-
-.header{
-  height: 12%;
-
+.header {
+  height: 15%;
+  color: #eee;
 }
-.header h1{
+
+.header h1 {
   padding-top: 20px;
   width: 100%;
-  background: transparent;
   text-align: center;
   text-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.4);
   font-size: 2vw;
+}
+
+@media screen and (min-width: 2in) and (max-width: 4in) {
+  .container {
+    width: 90%;
+    height: 450px;
+  }
+  .header {
+    background-color: #93a7e7;
+  }
+  .sidebar {
+    width: 40%;
+  }
+  .main {
+    width: 100%;
+    border-left: 5px solid #93a7e7;
+  }
+  .balance, .input, .history {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .balance {
+    line-height: 5px;
+  }
+  .main-balance {
+    font-size: 2.2vw;
+  }
+  .income-expense {
+    font-size: 2.5vw;
+  }
+  .plus, .minus {
+    line-height: 3px;
+  }
+  .transactions h2 {
+    color: brown;
+    font-size: 3vw;
+    text-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.4);
+  }
+  .transaction-list {
+    margin-left: -15px;
+    width: 100%;
+  }
+  .transaction {
+    border: 1px solid black;
+    height: 10px;
+    font-size: 2.5vw;
+    border-radius: 2vw;
+    width: 50%;
+    box-shadow: 0.8vw 0.8vw .4rem rgba(59, 48, 48, 0.2);
+  }
+  .transaction-text {
+    text-align: left;
+  }
+  .transaction-amount {
+    transform: translateX(0.5rem);
+  }
+  .delete-btn {
+    width: 5vw;
+    height: 5vw;
+    transform: translateX(2vw);
+    border: 1px solid white;
+    border-radius: 5px;
+  }
+  .transactions-income .transaction {
+    margin-left: 25px;
+    background-color: #5a9b67;
+  }
+  .transactions-expense .transaction {
+    background-color: #cf5856;
+    margin-left: 20px;
+  }
+  .history {
+    height: 80%;
+  }
+  .mainbalance, .trbalance, .income-input, .expense-input, .income-history, .expense-history {
+    width: 50%;
+  }
+  .input-group input:not([type="submit"]) {
+    display: flex;
+    flex-direction: row;
+    width: 15;
+    height: 10px;
+    border: none;
+    background: transparent;
+    border-bottom: .5vw solid rgb(151, 151, 151);
+    margin: 10px;
+    font-size: 2vw;
+    color: rgb(71, 70, 70);
+    outline: none;
+  }
+  .income input:not([type="submit"]):focus {
+    border-bottom: 0.2rem solid #77c987;
+  }
+  .expense input:not([type="submit"]):focus {
+    border-bottom: 0.2rem solid #ff716e;
+  }
+  .input-group input[type="submit"] {
+    width: 12vw;
+    height: 5vw;
+    border-radius: 0.3rem;
+    font-size: 2.5vw;
+  }
+  .income input[type="submit"] {
+    background-color: #329b47;
+  }
+  .expense input[type="submit"] {
+    background-color: #ff716e;
+  }
+  .header {
+    height: 10%;
+    color: white;
+  }
+  .header h1 {
+    padding-top: 15px;
+    width: 100%;
+    text-align: center;
+    text-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.4);
+    font-size: 4vw;
+  }
 }
