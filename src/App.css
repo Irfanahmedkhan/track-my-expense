@@ -99,14 +99,14 @@
 .transaction-text {
   width: 15vw;
   text-align: left;
+  transform: translateX(-2rem);
 }
 
 .transaction-amount {
-  transform: translateX(3.5rem);
+  text-align: right;
 }
 
-.delete-btn {
-  transform: translateX(3.5vw);
+.delete-btn, .idelete-btn, .edelete-btn {
   border: 1px solid white;
   margin: 0 1rem;
   color: #fff;
@@ -116,6 +116,14 @@
   outline: none;
   border-radius: 5px;
   box-shadow: 5 0.8rem 5rem rgba(247, 243, 243, 0.2);
+}
+
+.idelete-btn {
+  transform: translateX(-2vw);
+}
+
+.edelete-btn {
+  transform: translateX(-2vw);
 }
 
 .transactions-income .transaction {
