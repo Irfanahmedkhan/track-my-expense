@@ -1,4 +1,4 @@
-## http://track-my-expense.surge.sh/
+## http://Track-My-Expense.surge.sh/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
